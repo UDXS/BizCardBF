@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//get string length
 int y(char* a){
   char* b = a;
   while(*b!=0){
@@ -7,6 +8,7 @@ int y(char* a){
   }
   return (b-a);
 }
+//check for unbalanced brackets
 int z(char* a, int b){
 	int c = 0;
 	int d = 0;
@@ -43,7 +45,7 @@ int main (int w, char* x[]){
 		char j = *(x[1]+e);
 		char k = *(x[2]+f);
 		char* l = g+h;
-		if(i){
+		if(i>0){
 			if(j=='['){i++;}
 			if(j=='['){i--;}
 			e++;
@@ -53,9 +55,9 @@ int main (int w, char* x[]){
 		if(j=='<'){h--;}		
 		if(j=='+'){(*l)++;}
 		if(j=='-'){(*l)--;}
-		if(j==','){(*l)=k;f++;}
+		if(j==','&&(f<b)){(*l)=k;f++;}else if(j==','){(*l)=0;}
 		if(j=='.'){printf("%c",*l);}		
-		if(j=='['&&(*l)){d++;c[d]=e;}else if(i=='['){i++;}
+		if(j=='['&&(*l)){d++;c[d]=e;}else if(j=='['){i++;}
 		if(j==']'&&((*l)>0)){e=c[d];}else if(j==']'){d--;}
     e++;
   }
