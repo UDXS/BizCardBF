@@ -36,7 +36,7 @@ int main (int w, char* x[]){
   //current input char
   short f=0;
   //cells
-	char* g = calloc(sizeof(short),sizeof(char));
+  char* g = calloc(sizeof(short),sizeof(char));
   //current cell pos
   unsigned short h = 0;
   //unexecuted depth
