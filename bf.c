@@ -45,20 +45,16 @@ int main (int w, char* x[]){
 		char j = *(x[1]+e);
 		char k = *(x[2]+f);
 		char* l = g+h;
-		if(i>0){
-			if(j=='['){i++;}
-			if(j=='['){i--;}
-			e++;
-			continue;
-		}
+		if(i){goto loop;}
 		if(j=='>'){h++;}
 		if(j=='<'){h--;}		
 		if(j=='+'){(*l)++;}
 		if(j=='-'){(*l)--;}
 		if(j==','&&(f<b)){(*l)=k;f++;}else if(j==','){(*l)=0;}
 		if(j=='.'){printf("%c",*l);}		
+		loop:
 		if(j=='['&&*l){d++;c[d]=e;}else if(j=='['){i++;}
-		if(j==']'&&*l){e=c[d];}
+		if(j==']'&&*l&&!i){e=c[d];}else if(j==']'&&i){i--;}
     e++;
   }
   printf("\n");
