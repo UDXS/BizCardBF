@@ -20,11 +20,11 @@ int z(char* a, int b){
 	return d;
 }
 int main (int w, char* x[]){
-  printf("UDXS(Davit M.)'s Portable Business Card Brainf*** Interpreter @ udxs.me\n");
-  if(w!=3){printf("Missing Args!\n");return 0;}
+  puts("UDXS's Business Card Brainf*** Interpreter @ udxs.me\n");
+  if(w!=3){puts("Missing Args!\n");return 0;}
   //program size
   int a=y(x[1]);
-  if(z(x[1],a)){printf("Unbalanced Brackets!\n");return 0;}
+  if(z(x[1],a)){puts("Unbalanced  Brackets!\n");return 0;}
   //input size
   int b=y(x[2]);
   //stack
@@ -57,8 +57,8 @@ int main (int w, char* x[]){
 		if(j=='-'){(*l)--;}
 		if(j==','&&(f<b)){(*l)=k;f++;}else if(j==','){(*l)=0;}
 		if(j=='.'){printf("%c",*l);}		
-		if(j=='['&&(*l)){d++;c[d]=e;}else if(j=='['){i++;}
-		if(j==']'&&((*l)>0)){e=c[d];}else if(j==']'){d--;}
+		if(j=='['&&*l){d++;c[d]=e;}else if(j=='['){i++;}
+		if(j==']'&&*l){e=c[d];}
     e++;
   }
   printf("\n");
