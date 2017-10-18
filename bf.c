@@ -39,22 +39,29 @@ int main (int w, char* x[]){
   char* g = calloc(sizeof(short),sizeof(char));
   //current cell pos
   unsigned short h = 0;
-  //unexecuted depth
+  //required depth
   char i = 0;
+  //current depth
+  char j = 0;
   while(e<a) {
-		char j = *(x[1]+e);
-		char k = *(x[2]+f);
-		char* l = g+h;
-		if(i){goto loop;}
-		if(j=='>'){h++;}
-		if(j=='<'){h--;}		
-		if(j=='+'){(*l)++;}
-		if(j=='-'){(*l)--;}
-		if(j==','&&(f<b)){(*l)=k;f++;}else if(j==','){(*l)=0;}
-		if(j=='.'){printf("%c",*l);}		
-		loop:
-		if(j=='['&&*l){d++;c[d]=e;}else if(j=='['){i++;}
-		if(j==']'&&*l&&!i){e=c[d];}else if(j==']'&&i){i--;}
+		char k = *(x[1]+e);
+		char l = *(x[2]+f);
+    if(i!=j){
+      if(k=='['){j++;}
+      if(k==']'){j--;}
+      e++;
+      continue;
+    }
+    if(k=='['&&g[h]){i++;j++;d++;c[d]=e;}
+    if(k=='['&&g[h]==0){j++;}
+    if(k==']'&&g[h]){e=c[d];}
+    if(k==']'&&g[h]==0){d--;j--;i--;}
+    if(k=='+'){g[h]++;}
+    if(k=='-'){g[h]--;}
+    if(k=='>'){h++;}
+    if(k=='<'){h--;}
+    if(k=='.'){putchar(g[h]);}
+    if(k==','&&f<b){g[h]=l;f++;}else if(k==','){g[h]=0;}
     e++;
   }
   printf("\n");
