@@ -1,14 +1,24 @@
 # BizCardBF
 Portable C interpreter for Brainf*** for my business card 
 
-## Features
+# Table of Contents
+1. Features
+2. Compilation/Minification]
+3. Usage
+   * Advanced Bash Usage
+4. Implementation Details
+5. Sample Programs
+6. License
+7. Credits
+
+## Features 
 * Interpreter with all Brainf*** features
 * Loop depth of 256
 * about 65,536 cells (unsigned short)
 * max program/input size of about 65,536 characters
 * Cell width of 1 byte(char)
 * Error Reporting
-    
+
 ## Compilation/Minification
 You may use any C compiler you want on any platform but the build script runs GCC
 
@@ -27,12 +37,12 @@ This build script will:
 
     ./bf "program" "input"
 For example, here is a "cat" program that outputs the input:
+
     ./bf "+[,.]" "Hello World"
 On Windows, it would just be:
+
     bf "+[,.]" "Hello World"
-
-
-
+### Advanced Bash Usage
 If you would like to read the program or input from a file,
 use this format:
 
@@ -68,8 +78,19 @@ Program:
 * Third line is where output starts/error is printed
 * Prints error if it is missing arguments
 * Prints error if loop brackets are unbalanced
+
+## Sample Programs
+cat:
+
+    [This program outputs the input like the 'cat' program in linux.] +[,.]
+
+charset:
+
+    [This program gets every letter in the ASCII charset on your computer, Note: some are invsible]+[.+]
+    
+
 ## License
-This file is licensed under the MIT license. 
+This program is licensed under the MIT license. 
 
 For more information, open the [LICENSE](https://github.com/UDXS/BizCardBF/blob/master/LICENSE) file.
 ## Credits
