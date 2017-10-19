@@ -6,5 +6,5 @@ cminify/minifier.py bf.c > bf.min.c
 echo "Cleaning Up..."
 rm -rf cminify
 echo "Compiling..."
-gcc -o bf bf.c
+gcc -O3 -o bf bf.c
 echo "Done!"

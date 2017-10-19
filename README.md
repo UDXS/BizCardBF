@@ -1,16 +1,6 @@
 # BizCardBF
 Portable C interpreter for Brainf*** for my business card 
 
-# Table of Contents
-1. Features
-2. Compilation/Minification]
-3. Usage
-   * Advanced Bash Usage
-4. Implementation Details
-5. Sample Programs
-6. License
-7. Credits
-
 ## Features 
 * Interpreter with all Brainf*** features
 * Loop depth of 256
@@ -31,7 +21,13 @@ This build script will:
 * Download a C minifier from Github (https://github.com/Scylardor/cminify)
 * Minify bf.c, storing the output to bf.min.c
 * Remove the minifier afterwards
-* Compile bf.c with GCC, leaving you with the executable "bf"
+* Compile bf.c with GCC with compiler optimizations, leaving you with the executable "bf"
+Compiler optimizations have been shown to reduce runtimes to about a third of what they were.
+
+This was tested by running a brainf*** mandelbrot program by Erik Bosman and using the linux time command.
+In the test, the program was first compiled without optimizations and took about 1m 32s seconds to run the program.
+Then it was compiled with the `-O3` argument in GCC, providing the highest level optimizations
+possible. This took about 35s to run, showing a massive speed increase.
 
 ## Usage
 
@@ -78,16 +74,6 @@ Program:
 * Third line is where output starts/error is printed
 * Prints error if it is missing arguments
 * Prints error if loop brackets are unbalanced
-
-## Sample Programs
-cat:
-
-    [This program outputs the input like the 'cat' program in linux.] +[,.]
-
-charset:
-
-    [This program gets every letter in the ASCII charset on your computer, Note: some are invsible]+[.+]
-    
 
 ## License
 This program is licensed under the MIT license. 
