@@ -64,6 +64,6 @@ int main (int w, char* x[]){
     if(k==','&&f<b){g[h]=l;f++;}else if(k==','){g[h]=0;}
     e++;
   }
-  printf("\n");
+  puts("\n");
   return 0;
 }
