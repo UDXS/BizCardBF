@@ -1,4 +1,4 @@
-[not.bf: Not in brainf*** By UDXS (Davit Markarian) @ udxs.me
+[not.bf: Binary Not(0/1) in brainf*** By UDXS (Davit Markarian) @ udxs.me
 shortened: [[-]+>]<-[[-]+>]<[put your code here]
 ]
 Put input here: 

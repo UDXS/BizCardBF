@@ -75,6 +75,11 @@ Program:
 * Prints error if it is missing arguments
 * Prints error if loop brackets are unbalanced
 
+## Samples/Tests
+Samples and tests can be found in the tests folder.
+All credit to their original authors.
+
+To test execution speed, run the program with the `time` command.
 ## License
 This program is licensed under the MIT license. 
 
@@ -83,3 +88,4 @@ For more information, open the [LICENSE](https://github.com/UDXS/BizCardBF/blob/
 Made By Davit Markarian (UDXS) @ udxs.me
 
 Thanks to [rdebath](https://github.com/rdebath) for helping me find issues and [Scylardor]() for his c minifier - [cminify](https://github.com/Scylardor/cminify)
+Also, thanks to the creators of the various test programs I used.
