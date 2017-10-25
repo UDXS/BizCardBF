@@ -32,8 +32,8 @@ int main (int w, char* x[]){
   //current cell pos
   unsigned short h = 0;
   while(e<a) {
-		char k = x[1][e];
-		char l = x[2][f];
+    char k = x[1][e];
+    char l = x[2][f];
     if(i!=j){
       if(k=='['){j++;}
       if(k==']'){j--;}
